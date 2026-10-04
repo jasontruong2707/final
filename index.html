@@ -1,11 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Common Table Cafe</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/lightbox.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
+
 <body>
-  
+<div class="wrapper">
+
+  <header>
+    <a href="index.html" class="logo">
+      <img src="images/logo.jpg" alt="Common Table Cafe logo">
+      Common Table Cafe
+    </a>
+
+    <nav>
+      <ul>
+        <li><a href="index.html" class="current">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="story.html">Our Story</a></li>
+        <li><a href="about.html">Visit Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- HERO: big photo with buttons -->
+    <section class="hero">
+      <div class="hero-box">
+        <h1>Good food between classes</h1>
+        <p>Hot breakfast, fresh bowls, and coffee made to order, a short walk from your next lecture.</p>
+        <a href="menu.html" class="button">View the menu</a>
+        <a href="about.html" class="button button-white">Hours and location</a>
+      </div>
+    </section>
+
+    <!-- QUICK INFO: three columns -->
+    <section class="info">
+      <div>
+        <h2>Today</h2>
+        <p><span id="open-status">Mon to Thu 7 AM to 7 PM</span></p>
+      </div>
+      <div>
+        <h2>Where</h2>
+        <p>2700 Jefferson Avenue, Cincinnati, OH 45219</p>
+      </div>
+      <div>
+        <h2>Payment</h2>
+        <p>Debit, credit card, Apple pay, and cash</p>
+      </div>
+    </section>
+
+    <!-- FAVORITES: four cards -->
+    <section class="section">
+      <h2>This week's favorites</h2>
+      <p>The four items our regulars order most.</p>
+
+      <div class="card-grid">
+        <div class="card">
+          <img src="images/breakfast_sandwich.jpg" alt="Egg and cheddar breakfast sandwich">
+          <div class="card-text">
+            <h3>Morning Stack</h3>
+            <p class="price">$4.75</p>
+            <p>Fried egg, cheddar, and turkey sausage on an English muffin. Served until 10:30 AM.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="images/chicken_rice_bowl.jpeg" alt="Rice bowl with grilled chicken and black beans">
+          <div class="card-text">
+            <h3>Chicken Bowl</h3>
+            <p class="price">$8.50</p>
+            <p>Grilled chicken over cilantro rice with black beans, corn salsa, and lime crema.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="images/tomato_soup_grilled_cheese.jpeg" alt="Tomato soup with a grilled cheese sandwich">
+          <div class="card-text">
+            <h3>Soup and Grilled Cheese</h3>
+            <p class="price">$7.25</p>
+            <p>A cup of tomato basil soup with half a grilled cheese on sourdough.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="images/coldbrew_coffee.jpeg" alt="Glass of cold brew coffee with ice">
+          <div class="card-text">
+            <h3>House Cold Brew</h3>
+            <p class="price">$3.50</p>
+            <p>Steeped for 18 hours. Add oat milk or vanilla for 50 cents.</p>
+          </div>
+        </div>
+      </div><!-- end of card-grid -->
+
+      <p class="center"><a href="menu.html" class="button">See the full menu</a></p>
+    </section>
+
+    <!-- GALLERY: click a photo to make it bigger -->
+    <section class="section cream">
+      <h2>From our kitchen</h2>
+      <div class="gallery">
+        <img src="images/service_counter.jpg" alt="The service counter at lunch" class="thumbnail">
+        <img src="images/seating_area.jpeg" alt="Seating area with long tables" class="thumbnail">
+        <img src="images/fresh_bread.jpeg" alt="Fresh bread on a cooling rack" class="thumbnail">
+        <img src="images/salad_bar.jpeg" alt="Salad bar with fresh vegetables" class="thumbnail">
+        <img src="images/pizza_from_the oven.jpeg" alt="Flatbread pizza coming out of the oven" class="thumbnail">
+        <img src="images/coffee_bar.jpg" alt="Espresso machine at the coffee bar" class="thumbnail">
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer-grid">
+      <section>
+        <h2>Common Table Cafe</h2>
+        <p>2700 Jefferson Avenue, Cincinnati, OH 45219<br>
+          (513) 555-XXXX</p>
+        <div class="social">
+          <a href="https://www.facebook.com/" target="_blank" aria-label="Facebook">
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+          <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="https://www.tiktok.com/" target="_blank" aria-label="TikTok">
+            <i class="fa-brands fa-tiktok"></i>
+          </a>
+        </div>
+      </section>
+
+      <section>
+        <h2>Hours</h2>
+        <p>Mon to Thu: 9 AM to 7 PM<br>
+          Fri: 9 AM to 3 PM<br>
+          Sat: 9 AM to 1 PM<br>
+          Sun: Closed</p>
+      </section>
+
+      <section>
+        <h2>Pages</h2>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="story.html">Our Story</a></li>
+          <li><a href="about.html">Visit Us</a></li>
+        </ul>
+      </section>
+    </div>
+
+    <p class="copyright"><small>&copy; 2026 Common Table Cafe. Website by Nhan Truong</small></p>
+  </footer>
+
+</div><!-- end of wrapper -->
+
+  <!-- Lightbox: hidden until a photo is clicked -->
+  <div class="lightbox" id="lightbox">
+    <div class="lightbox-content">
+      <button class="close-btn" id="close-btn">&times;</button>
+      <img id="lightbox-img" src="images/gallery-1.jpg" alt="Larger photo">
+    </div>
+  </div>
+
+<script src="js/hours.js"></script>
+<script src="js/lightbox.js"></script>
 </body>
 </html>

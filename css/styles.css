@@ -1,0 +1,594 @@
+/* ========================================
+   Common Table Cafe - Main Styles
+   Used on all four pages
+======================================== */
+
+/* Colors used on this site:
+   dark brown  #33241b  (text, header bar, footer)
+   red         #b5412c  (buttons, prices)
+   yellow      #f2b233  (lines and highlights)
+   light cream #fff6e0  (light backgrounds)
+   tan         #e8dcc6  (borders)
+*/
+
+
+/* ========================================
+   BASE PAGE STYLES
+======================================== */
+body {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 110%;
+  line-height: 1.5;
+  color: #33241b;
+  background-color: #33241b;
+}
+
+.wrapper {
+  background-color: white;
+  max-width: 1100px;
+  margin: 0 auto; /* centers the page */
+  box-shadow: 2px 2px 20px black;
+}
+
+h1, h2, h3 {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+h2 {
+  font-size: 180%;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  font-size: 120%;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Space inside each big section of the page */
+.section {
+  padding: 2.5rem 2rem;
+}
+
+/* Light cream background for every other section */
+.cream {
+  background-color: #fff6e0;
+}
+
+
+/* ========================================
+   HEADER AND NAV
+   (nav bar inside the header)
+======================================== */
+header {
+  display: flex; /* puts the logo and nav side by side */
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1rem 2rem;
+  border-bottom: 4px solid #f2b233;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #33241b;
+  text-decoration: none; /* removes the underline */
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 140%;
+  font-weight: bold;
+}
+
+.logo img {
+  width: 45px;
+}
+
+nav ul {
+  list-style: none; /* removes bullet points */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+nav a {
+  display: block;
+  color: #33241b;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+}
+
+nav a:hover {
+  background-color: #fff6e0;
+}
+
+/* The link for the page you are on */
+nav a.current {
+  background-color: #33241b;
+  color: white;
+}
+
+
+/* ========================================
+   BUTTONS
+======================================== */
+.button {
+  display: inline-block;
+  background-color: #b5412c;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.8rem 1.5rem;
+  border-radius: 2rem;
+  border: 2px solid #b5412c;
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+.button:hover {
+  background-color: #8f3020;
+  transform: translateY(-3px); /* moves the button up a little */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+}
+
+/* White outline button, used on top of the hero photo */
+.button-white {
+  background-color: transparent;
+  border: 2px solid white;
+}
+
+.button-white:hover {
+  background-color: white;
+  color: #33241b;
+}
+
+
+/* ========================================
+   PAGE TITLE BAR
+   (top of Menu, Our Story, and Visit Us)
+======================================== */
+.page-title {
+  background-color: #33241b;
+  color: white;
+  padding: 2.5rem 2rem;
+}
+
+.page-title h1 {
+  font-size: 250%;
+}
+
+.page-title p {
+  margin-bottom: 0;
+}
+
+
+/* ========================================
+   HOME PAGE - HERO
+======================================== */
+.hero {
+  background-image: url(../images/hero.jpeg); /* ../ goes out of the css folder */
+  background-size: cover;
+  background-position: center;
+  padding: 5rem 2rem;
+}
+
+/* Dark see-through box so the white text is easy to read */
+.hero-box {
+  background-color: rgba(51, 36, 27, 0.8);
+  color: white;
+  max-width: 500px;
+  padding: 2rem;
+  border-radius: 1rem;
+}
+
+.hero-box h1 {
+  font-size: 250%;
+  margin-bottom: 0.5rem;
+}
+
+
+/* ========================================
+   HOME PAGE - QUICK INFO
+======================================== */
+.info {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+  background-color: #fff6e0;
+  padding: 1.5rem 2rem;
+  border-bottom: 1px solid #e8dcc6;
+}
+
+.info h2 {
+  font-size: 110%;
+  margin-bottom: 0.25rem;
+}
+
+.info p {
+  margin-bottom: 0;
+}
+
+/* Open / closed label (hours.js changes the class) */
+#open-status {
+  font-weight: bold;
+  padding: 0.2rem 0.6rem;
+  border-radius: 0.4rem;
+  background-color: #e8dcc6;
+}
+
+#open-status.open {
+  background-color: #f2b233;
+}
+
+#open-status.closed {
+  background-color: #33241b;
+  color: white;
+}
+
+
+/* ========================================
+   HOME PAGE - FAVORITE ITEMS (cards)
+======================================== */
+.card-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.card {
+  border: 1px solid #e8dcc6;
+  border-radius: 1rem;
+  overflow: hidden; /* keeps the zoomed photo inside the card */
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+}
+
+.card img {
+  width: 100%;
+  height: 170px;
+  object-fit: cover; /* crops the photo to fill the space */
+  transition: transform 0.3s;
+}
+
+/* Photo zooms in when you hover over the card */
+.card:hover img {
+  transform: scale(1.1);
+}
+
+.card-text {
+  padding: 1rem;
+}
+
+.card-text p {
+  font-size: 90%;
+  margin-bottom: 0;
+}
+
+.card-text .price {
+  margin: 0.25rem 0 0.5rem;
+}
+
+.price {
+  color: #b5412c;
+  font-weight: bold;
+}
+
+.center {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+
+/* ========================================
+   MENU PAGE
+======================================== */
+.filter-buttons {
+  margin-bottom: 2rem;
+}
+
+.filter-btn {
+  font-size: 100%;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  margin: 0 0.25rem 0.5rem 0;
+  border: 2px solid #33241b;
+  border-radius: 2rem;
+  background-color: white;
+  color: #33241b;
+  cursor: pointer; /* hand cursor */
+}
+
+.filter-btn:hover {
+  background-color: #fff6e0;
+}
+
+/* The button that is picked (menu-filter.js adds this class) */
+.filter-btn.active {
+  background-color: #33241b;
+  color: white;
+}
+
+/* Two columns of menu sections */
+.menu-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem 3rem;
+}
+
+.menu-section h2 {
+  font-size: 150%;
+  border-bottom: 3px solid #f2b233;
+  padding-bottom: 0.3rem;
+  margin-bottom: 0.3rem;
+}
+
+.served {
+  font-size: 90%;
+  font-style: italic;
+}
+
+.menu-item {
+  border-bottom: 1px solid #e8dcc6;
+  padding: 0.6rem 0;
+}
+
+/* Puts the food name on the left and the price on the right */
+.item-name {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.item-name h3 {
+  font-size: 105%;
+}
+
+.menu-item p {
+  font-size: 90%;
+  margin-bottom: 0;
+}
+
+.tag {
+  font-size: 70%;
+  border: 1px solid #33241b;
+  border-radius: 4px;
+  padding: 0 0.3rem;
+}
+
+.photo-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 1rem;
+}
+
+
+/* ========================================
+   STORY PAGE
+======================================== */
+/* Floated figure, from the float exercise */
+.pic-right {
+  float: right;
+  width: 340px;
+  background-color: #fff6e0;
+  padding: 0.75rem;
+  margin: 0 0 1rem 2rem;
+  border-radius: 0.5rem;
+}
+
+.pic-right figcaption {
+  text-align: center;
+  font-size: 80%;
+  font-style: italic;
+}
+
+/* Makes the next section start below the floated figure */
+.clear {
+  clear: both;
+}
+
+/* Milestones list */
+.timeline {
+  list-style: none;
+  border-left: 4px solid #f2b233;
+  padding-left: 1.5rem;
+}
+
+.timeline li {
+  margin-bottom: 1.5rem;
+}
+
+.year {
+  display: inline-block;
+  background-color: #b5412c;
+  color: white;
+  font-weight: bold;
+  padding: 0.2rem 0.7rem;
+  border-radius: 1rem;
+  margin-bottom: 0.3rem;
+}
+
+.timeline p {
+  margin-bottom: 0;
+}
+
+
+/* ========================================
+   VISIT US PAGE
+======================================== */
+.visit-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
+
+table {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+th, td {
+  text-align: left;
+  padding: 0.6rem;
+  border-bottom: 1px solid #e8dcc6;
+}
+
+/* Today's row (hours.js adds this class) */
+tr.today {
+  background-color: #fff6e0;
+  font-weight: bold;
+}
+
+.visit-photo {
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+}
+
+.contact {
+  list-style: none;
+  margin-bottom: 1.5rem;
+}
+
+.contact li {
+  margin-bottom: 0.8rem;
+}
+
+/* Questions that open and close */
+details {
+  background-color: white;
+  border: 1px solid #e8dcc6;
+  border-radius: 0.5rem;
+  margin-bottom: 0.75rem;
+  padding: 1rem;
+}
+
+summary {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+details p {
+  margin: 0.75rem 0 0;
+}
+
+
+/* ========================================
+   FOOTER
+======================================== */
+footer {
+  background-color: #33241b;
+  color: white;
+  padding: 2rem;
+  font-size: 90%;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 2rem;
+}
+
+footer h2 {
+  font-size: 120%;
+  color: #f2b233;
+  margin-bottom: 0.5rem;
+}
+
+footer ul {
+  list-style: none;
+}
+
+footer a {
+  color: white;
+}
+
+footer a:hover {
+  color: #f2b233;
+}
+
+.social {
+  display: flex; /* puts the icons in a row */
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.social a {
+  display: flex;
+  justify-content: center; /* centers the icon left to right */
+  align-items: center;     /* centers the icon top to bottom */
+  width: 30px;
+  height: 30px;
+  border: 2px solid #f2b233;
+  border-radius: 50%; /* makes a circle */
+  color: white;
+  font-size: 120%;
+  text-decoration: none;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.social a:hover {
+  background-color: #f2b233;
+  color: #33241b;
+  transform: translateY(-3px); /* moves up a little, like the buttons */
+}
+
+.copyright {
+  text-align: center;
+  font-style: italic;
+  border-top: 1px solid gray;
+  padding-top: 1rem;
+  margin: 1rem 0 0;
+}
+
+
+/* ========================================
+   RESPONSIVE MEDIA QUERIES
+======================================== */
+/* Tablets */
+@media (max-width: 800px) {
+  .card-grid,
+  .photo-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .menu-grid,
+  .visit-grid,
+  .info,
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Phones */
+@media (max-width: 480px) {
+  header {
+    flex-direction: column;
+  }
+
+  .card-grid,
+  .photo-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pic-right {
+    float: none;
+    width: 100%;
+    margin: 0 0 1rem 0;
+  }
+
+  .section {
+    padding: 2rem 1rem;
+  }
+}

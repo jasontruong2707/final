@@ -1,0 +1,95 @@
+/* ------------------------------------
+   Lightbox from the class exercise.
+   Used on the Home, Menu, and Story pages.
+------------------------------------ */
+
+/* ------------------------------------
+   GALLERY SECTION
+------------------------------------ */
+.gallery {
+  display: grid; /* Turns this element into a grid container */
+  grid-template-columns: 1fr 1fr 1fr; /* Creates 3 equal-width columns */
+  gap: 1rem; /* Adds space between the grid items */
+}
+
+.thumbnail {
+  width: 100%; /* Makes each image fill the full width of its grid column */
+  display: block; /* Removes the small extra space that inline images often have */
+  height: 220px; /* Makes all gallery photos the same height */
+  object-fit: cover; /* Crops the photo to fill the space */
+  border-radius: 8px; /* Rounds the corners slightly */
+  cursor: pointer; /* Changes the cursor to a hand to show the image can be clicked */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Adds a soft shadow to give the image some depth */
+  transition: all 0.3s ease; /* Makes the hover scale effect animate smoothly */
+}
+
+.thumbnail:hover {
+  transform: scale(1.02); /* Slightly enlarges the image on hover */
+}
+
+/* ------------------------------------
+   LIGHTBOX
+------------------------------------ */
+/* The lightbox covers the entire browser window.
+  It starts hidden with display: none.
+  JavaScript changes it to display: flex when needed. */
+.lightbox {
+  display: none; /* Hidden by default until JavaScript shows it */
+  position: fixed; /* Stays in place and covers the whole browser window */
+  top: 0; /* Starts at the top edge of the screen */
+  left: 0; /* Starts at the left edge of the screen */
+  width: 100%; /* Stretches across the full browser width */
+  height: 100%; /* Stretches across the full browser height */
+  background-color: rgba(0, 0, 0, 0.85); /* Dark transparent overlay */
+  justify-content: center; /* Centers the lightbox content horizontally */
+  align-items: center; /* Centers the lightbox content vertically */
+  padding: 1rem; /* Adds a little space around the edges */
+  z-index: 10; /* Puts the lightbox on top of everything else */
+}
+
+/* This box holds the enlarged image and close button.
+   position: relative lets us place the close button
+   in the top corner of this box. */
+.lightbox-content {
+  position: relative; /* Makes this box the positioning reference for the close button */
+  max-width: 900px; /* Prevents the lightbox from getting too wide */
+  width: 100%; /* Lets it shrink nicely on smaller screens */
+  text-align: center; /* Centers inline content inside this box */
+}
+
+/* The larger image should fit nicely on screen
+  without overflowing outside the browser window. */
+#lightbox-img {
+  width: 100%; /* Makes the image fill the width of its container */
+  max-height: 80vh; /* Limits the image height to 80% of the viewport height */
+  object-fit: contain; /* Shows the entire image without cropping it */
+  border-radius: 8px; /* Rounds the corners slightly */
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4); /* Adds a stronger shadow than the thumbnails */
+}
+
+/* Close button styles */
+.close-btn {
+  position: absolute; /* Positions the button relative to .lightbox-content */
+  top: -0.75rem; /* Moves the button slightly above the top edge */
+  right: -0.75rem; /* Moves the button slightly past the right edge */
+  width: 2.5rem; /* Sets the button width */
+  height: 2.5rem; /* Sets the button height */
+  border: none; /* Removes the default button border */
+  border-radius: 50%; /* Makes the button a circle */
+  background-color: white; /* Button background color */
+  color: black; /* Color of X */
+  font-size: 1.5rem; /* Size of the X */
+  font-weight: bold; /* Makes the X symbol thicker */
+  cursor: pointer; /* Shows a hand cursor on hover */
+}
+
+/* ------------------------------------
+   RESPONSIVE ADJUSTMENTS
+------------------------------------ */
+
+/* On small screens, switch to 1 column */
+@media (max-width: 500px) {
+  .gallery {
+    grid-template-columns: 1fr; /* Changes the gallery to a single column */
+  }
+}
