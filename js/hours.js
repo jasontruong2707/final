@@ -10,13 +10,13 @@ var hour = now.getHours();
 
 var isOpen = false;
 
-// Monday to Thursday: 7 AM to 7 PM
-if (day >= 1 && day <= 4 && hour >= 7 && hour < 19) {
+// Monday to Thursday: 9 AM to 7 PM
+if (day >= 1 && day <= 4 && hour >= 9 && hour < 19) {
   isOpen = true;
 }
 
-// Friday: 7 AM to 3 PM
-if (day === 5 && hour >= 7 && hour < 15) {
+// Friday: 9 AM to 3 PM
+if (day === 5 && hour >= 9 && hour < 15) {
   isOpen = true;
 }
 
