@@ -14,6 +14,3 @@ Final Project for Web Design I
 - js/hours.js - shows "Open now" or "Closed now"
 - images/ - all photos
 
-## To do
-- Replace the photos in the images folder (keep the same file names)
-- Put my name in the footer on all 4 pages
